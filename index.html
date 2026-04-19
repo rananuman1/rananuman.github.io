@@ -731,7 +731,7 @@
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#" class="btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.82rem;" onclick="document.getElementById('resume-section').scrollIntoView()">Download CV</a>
+<a href="assets/SE Intern CV.pdf" download="SE_Intern_CV.pdf" class="btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.82rem;">Download CV</a>
 </nav>
 
 <!-- HERO -->
@@ -943,9 +943,9 @@
     <span class="section-label">My Resume</span>
     <h2 class="section-title fade-up" style="margin-bottom: 1rem;">Download My CV</h2>
     <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 2rem; font-weight: 300;">A complete overview of my skills, experience, and qualifications.</p>
-    <a href="assets/SE Intern CV.pdf" download="SE Intern CV.pdf" download class="btn-primary fade-up" style="display: inline-flex;">
-      ⬇ Download CV
-    </a>
+    <a href="assets/SE Intern CV.pdf" download="SE_Intern_CV.pdf" class="btn-primary fade-up" style="display: inline-flex;">
+  ⬇ Download CV
+</a>
   </div>
 </section>
 
@@ -1039,6 +1039,18 @@
       }
     });
   });
+</script>
+ <button onclick="downloadCV()" class="btn-primary" style="padding: 0.85rem 1.8rem; border-radius: 100px; background: var(--black); color: var(--white); border: none; cursor: pointer; font-size: 0.9rem; font-weight: 500;">Download My CV</button>
+
+<script>
+function downloadCV() {
+    const link = document.createElement('a');
+    link.href = 'assets/SE Intern CV.pdf';
+    link.download = 'SE_Intern_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 </script>
 </body>
 </html>
